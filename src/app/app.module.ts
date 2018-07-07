@@ -1,11 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { NgxEditorModule } from 'ngx-editor';
-import { AppComponent } from './app.component';
-import { SanitizeHtmlPipe } from './shared/pipes/sanitize-html/sanitize-html.pipe';
-import { SharedModule } from './shared/shared.module';
+
+import { AppRoutingModule } from './app-routing/app-routing.module';
 import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
+import { ViewsModule } from './views/views.module';
+
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
@@ -13,10 +15,10 @@ import { CoreModule } from './core/core.module';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
+    AppRoutingModule,
     SharedModule,
     CoreModule,
-    NgxEditorModule,
+    ViewsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

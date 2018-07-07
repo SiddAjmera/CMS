@@ -1,7 +1,9 @@
-import { environment } from './../../environments/environment.prod';
 import { NgModule } from '@angular/core';
+
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+
+import { environment } from './../../environments/environment.prod';
 
 @NgModule({
   imports: [
@@ -10,7 +12,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
   ],
   exports: [
     AngularFireModule,
-    AngularFireAuthModule,
+    AngularFireAuthModule
   ]
 })
 export class AppFirebaseModule { }
