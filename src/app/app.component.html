@@ -1,7 +1,9 @@
-<app-ngx-editor 
+<!-- <app-ngx-editor 
   [placeholder]="'Enter text here...'" 
   [spellcheck]="true" 
   [(ngModel)]="htmlContent">
 </app-ngx-editor>
 
-<div [innerHTML]="htmlContent | sanitizeHtml"></div>
+<div [innerHTML]="htmlContent | sanitizeHtml"></div> -->
+<app-header></app-header>
+<router-outlet></router-outlet>

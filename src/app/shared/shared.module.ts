@@ -1,7 +1,9 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+
 import { AppFirebaseModule } from '../app-firebase/app-firebase.module';
 import { HttpClientModule } from '@angular/common/http';
+
 import { SanitizeHtmlPipe } from 'src/app/shared/pipes/sanitize-html/sanitize-html.pipe';
 
 @NgModule({
@@ -11,6 +13,10 @@ import { SanitizeHtmlPipe } from 'src/app/shared/pipes/sanitize-html/sanitize-ht
     HttpClientModule
   ],
   declarations: [SanitizeHtmlPipe],
-  exports: [AppFirebaseModule, HttpClientModule]
+  exports: [
+    CommonModule,
+    AppFirebaseModule,
+    HttpClientModule
+  ]
 })
-export class SharedModule { }
+export class SharedModule {}
