@@ -6,10 +6,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgxEditorModule } from 'ngx-editor';
 
 import { AppComponent } from './app.component';
+import { SanitizeHtmlPipe } from './pipes/sanitize-html/sanitize-html.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SanitizeHtmlPipe
   ],
   imports: [
     BrowserModule,

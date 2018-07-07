@@ -4,4 +4,4 @@
   [(ngModel)]="htmlContent">
 </app-ngx-editor>
 
-<div [innerHTML]= htmlContent></div>
+<div [innerHTML]="htmlContent | sanitizeHtml"></div>
